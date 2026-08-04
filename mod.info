@@ -1,0 +1,4 @@
+name=Better Gun Jam
+poster=preview.png
+id=betterGUNJAM
+description=Guns don't jam when their condition is above a customizable threshold (70% by default). Below it, jam chance gradually increases as condition decreases.
