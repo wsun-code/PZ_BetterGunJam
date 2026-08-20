@@ -1,0 +1,11 @@
+VERSION = 1,
+
+option BetterGunJam.Threshold
+{
+    type = enum,
+    numValues = 10,
+    default = 3,
+    page = BetterGunJam,
+    translation = BetterGunJam_Threshold,
+    valueTranslation = BetterGunJam_Threshold,
+}

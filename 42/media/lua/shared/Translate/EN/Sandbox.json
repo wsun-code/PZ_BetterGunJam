@@ -1,0 +1,15 @@
+{
+    "Sandbox_BetterGunJam": "[MP ONLY] Better Gun Jam",
+    "Sandbox_BetterGunJam_Threshold": "Guns Will Not Jam Above",
+    "Sandbox_BetterGunJam_Threshold_tooltip": "0% = no jamming at anytime. Affects every player on the server.",
+    "Sandbox_BetterGunJam_Threshold_option1": "90%",
+    "Sandbox_BetterGunJam_Threshold_option2": "80%",
+    "Sandbox_BetterGunJam_Threshold_option3": "70%",
+    "Sandbox_BetterGunJam_Threshold_option4": "60%",
+    "Sandbox_BetterGunJam_Threshold_option5": "50%",
+    "Sandbox_BetterGunJam_Threshold_option6": "40%",
+    "Sandbox_BetterGunJam_Threshold_option7": "30%",
+    "Sandbox_BetterGunJam_Threshold_option8": "20%",
+    "Sandbox_BetterGunJam_Threshold_option9": "10%",
+    "Sandbox_BetterGunJam_Threshold_option10": "0%"
+}

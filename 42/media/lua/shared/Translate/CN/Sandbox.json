@@ -1,0 +1,15 @@
+{
+    "Sandbox_BetterGunJam": "【仅多人】更友好的卡壳",
+    "Sandbox_BetterGunJam_Threshold": "枪械耐久度高于此阈值时不会卡壳",
+    "Sandbox_BetterGunJam_Threshold_tooltip": "0% = 永不卡壳。影响服务器上的所有玩家。",
+    "Sandbox_BetterGunJam_Threshold_option1": "90%",
+    "Sandbox_BetterGunJam_Threshold_option2": "80%",
+    "Sandbox_BetterGunJam_Threshold_option3": "70%",
+    "Sandbox_BetterGunJam_Threshold_option4": "60%",
+    "Sandbox_BetterGunJam_Threshold_option5": "50%",
+    "Sandbox_BetterGunJam_Threshold_option6": "40%",
+    "Sandbox_BetterGunJam_Threshold_option7": "30%",
+    "Sandbox_BetterGunJam_Threshold_option8": "20%",
+    "Sandbox_BetterGunJam_Threshold_option9": "10%",
+    "Sandbox_BetterGunJam_Threshold_option10": "0%"
+}
