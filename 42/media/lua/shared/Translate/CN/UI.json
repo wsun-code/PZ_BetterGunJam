@@ -1,0 +1,5 @@
+{
+    "UI_BetterGunJam": "更友好的卡壳",
+    "UI_BetterGunJam_Threshold": "枪械耐久度高于此阈值时不会卡壳",
+    "UI_BetterGunJam_Threshold_tooltip": "0% = 永不卡壳。"
+}

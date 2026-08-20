@@ -7,7 +7,8 @@ GAME_DIR=$(realpath "$MOD_DIR/../ProjectZomboid")
 RUNNER="$TEST_DIR/RunKahlua.java"
 SUPPORT="$TEST_DIR/support.lua"
 NATIVE_MOD_OPTIONS="$GAME_DIR/media/lua/client/PZAPI/ModOptions.lua"
-MOD_SCRIPT="$MOD_DIR/media/lua/client/ZZbetterGunJam.lua"
+MOD_SCRIPT=$(realpath "${1:-$MOD_DIR/42/media/lua/shared/ZZBetterGunJam.lua}")
+CLIENT_OPTIONS=$(realpath "${2:-$MOD_DIR/42/media/lua/client/ZZBetterGunJamOptions.lua}")
 TESTS="$TEST_DIR/ZZbetterGunJam_test.lua"
 
 if ! command -v javac >/dev/null 2>&1; then
@@ -33,6 +34,7 @@ if [[ -x "$GAME_DIR/jre64/bin/java.exe" ]]; then
     SUPPORT_WINDOWS=$(wslpath -w "$SUPPORT")
     NATIVE_MOD_OPTIONS_WINDOWS=$(wslpath -w "$NATIVE_MOD_OPTIONS")
     MOD_SCRIPT_WINDOWS=$(wslpath -w "$MOD_SCRIPT")
+    CLIENT_OPTIONS_WINDOWS=$(wslpath -w "$CLIENT_OPTIONS")
     TESTS_WINDOWS=$(wslpath -w "$TESTS")
 
     (
@@ -43,6 +45,7 @@ if [[ -x "$GAME_DIR/jre64/bin/java.exe" ]]; then
             "$SUPPORT_WINDOWS" \
             "$NATIVE_MOD_OPTIONS_WINDOWS" \
             "$MOD_SCRIPT_WINDOWS" \
+            "$CLIENT_OPTIONS_WINDOWS" \
             "$TESTS_WINDOWS"
     )
 elif [[ -x "$GAME_DIR/jre64/bin/java" ]]; then
@@ -54,6 +57,7 @@ elif [[ -x "$GAME_DIR/jre64/bin/java" ]]; then
             "$SUPPORT" \
             "$NATIVE_MOD_OPTIONS" \
             "$MOD_SCRIPT" \
+            "$CLIENT_OPTIONS" \
             "$TESTS"
     )
 else

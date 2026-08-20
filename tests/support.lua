@@ -1,6 +1,6 @@
--- Public seams exercised by the tests:
+-- Public seams exercised by the tests: SandboxVars, authority mode,
 -- Events.OnWeaponSwingHitPoint, ISReloadWeaponAction.onShoot, and
--- ISRackFirearm:rackBullet. These doubles model only their observable weapon state.
+-- ISRackFirearm:rackBullet. Doubles model only observable weapon state and sync.
 require = function(_) end
 getText = function(value)
     return value
@@ -9,6 +9,32 @@ end
 randomRoll = 0
 ZombRand = function(_)
     return randomRoll
+end
+clientMode = false
+serverMode = false
+isClient = function()
+    return clientMode
+end
+isServer = function()
+    return serverMode
+end
+isMultiplayer = function()
+    return clientMode or serverMode
+end
+
+SandboxVars = {
+    BetterGunJam = {
+        Threshold = 3,
+    },
+}
+
+syncHandWeaponFields = function(_, weapon)
+    if isClient() then
+        return
+    end
+
+    weapon.syncCalls = (weapon.syncCalls or 0) + 1
+    weapon.syncedJammed = weapon:isJammed()
 end
 
 Events = {
@@ -66,11 +92,17 @@ function newWeapon(condition, jammed, jamChance)
 end
 
 ISReloadWeaponAction = {
-    onShoot = function(_, weapon)
+    onShoot = function(player, weapon)
         weapon.shotCalls = (weapon.shotCalls or 0) + 1
-        if weapon.jamOnShoot then
+        if weapon.throwShoot then
+            error("shot failure")
+        end
+
+        if weapon:getJamGunChance() > 0 and weapon.jamOnShoot then
             weapon:setJammed(true)
         end
+        syncHandWeaponFields(player, weapon)
+        return "shot-complete"
     end,
 }
 
@@ -83,6 +115,7 @@ ISRackFirearm = {
 
         if self.gun:isJammed() then
             if not self.unjamSucceeds then
+                syncHandWeaponFields(self.character, self.gun)
                 return "old-jam-remains"
             end
             self.gun:setJammed(false)
@@ -91,6 +124,7 @@ ISRackFirearm = {
         if self.gun:getJamGunChance() > 0 and self.gun.jamOnRack then
             self.gun:setJammed(true)
         end
+        syncHandWeaponFields(self.character, self.gun)
         return "rack-complete"
     end,
 }

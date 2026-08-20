@@ -1,0 +1,5 @@
+{
+    "UI_BetterGunJam": "Better Gun Jam",
+    "UI_BetterGunJam_Threshold": "Guns Will Not Jam Above",
+    "UI_BetterGunJam_Threshold_tooltip": "0% = no jamming at anytime."
+}
