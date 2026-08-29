@@ -37,8 +37,8 @@ test("registers a localizable singleplayer threshold in native mod options", fun
     )
     expect(
         options.data[1].type == "description"
-            and options.data[1].text == "UI_BetterGunJam_Threshold_tooltip",
-        "singleplayer threshold explanation does not use a translation key"
+            and options.data[1].text == "0% = no jamming at anytime.",
+        "singleplayer threshold explanation was not safely resolved"
     )
     expect(#threshold.values == 10, "singleplayer threshold does not have ten choices")
     expect(threshold.values[1] == "90%" and threshold.values[10] == "0%", "singleplayer choices are wrong")

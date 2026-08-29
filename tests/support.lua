@@ -2,8 +2,31 @@
 -- Events.OnWeaponSwingHitPoint, ISReloadWeaponAction.onShoot, and
 -- ISRackFirearm:rackBullet. Doubles model only observable weapon state and sync.
 require = function(_) end
-getText = function(value)
-    return value
+-- B42.20's getText validates Java-style format strings.  The native
+-- ModOptions adapter calls it for every combobox item, so literal percent
+-- labels must enter as translation keys whose values escape '%' as '%%'.
+local optionText = {
+    UI_BetterGunJam_Threshold_tooltip = "0%% = no jamming at anytime.",
+    UI_BetterGunJam_Threshold_option1 = "90%%",
+    UI_BetterGunJam_Threshold_option2 = "80%%",
+    UI_BetterGunJam_Threshold_option3 = "70%%",
+    UI_BetterGunJam_Threshold_option4 = "60%%",
+    UI_BetterGunJam_Threshold_option5 = "50%%",
+    UI_BetterGunJam_Threshold_option6 = "40%%",
+    UI_BetterGunJam_Threshold_option7 = "30%%",
+    UI_BetterGunJam_Threshold_option8 = "20%%",
+    UI_BetterGunJam_Threshold_option9 = "10%%",
+    UI_BetterGunJam_Threshold_option10 = "0%%",
+}
+getText = function(key)
+    local text = optionText[key]
+    if text ~= nil then
+        return string.format(text)
+    end
+    if string.find(key, "%%") then
+        error("literal percent labels must be passed through a translation key", 0)
+    end
+    return key
 end
 
 randomRoll = 0

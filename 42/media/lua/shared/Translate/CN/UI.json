@@ -1,5 +1,15 @@
 {
     "UI_BetterGunJam": "更友好的卡壳",
     "UI_BetterGunJam_Threshold": "枪械耐久度高于此阈值时不会卡壳",
-    "UI_BetterGunJam_Threshold_tooltip": "0% = 永不卡壳。"
+    "UI_BetterGunJam_Threshold_tooltip": "0%% = 永不卡壳。",
+    "UI_BetterGunJam_Threshold_option1": "90%%",
+    "UI_BetterGunJam_Threshold_option2": "80%%",
+    "UI_BetterGunJam_Threshold_option3": "70%%",
+    "UI_BetterGunJam_Threshold_option4": "60%%",
+    "UI_BetterGunJam_Threshold_option5": "50%%",
+    "UI_BetterGunJam_Threshold_option6": "40%%",
+    "UI_BetterGunJam_Threshold_option7": "30%%",
+    "UI_BetterGunJam_Threshold_option8": "20%%",
+    "UI_BetterGunJam_Threshold_option9": "10%%",
+    "UI_BetterGunJam_Threshold_option10": "0%%"
 }

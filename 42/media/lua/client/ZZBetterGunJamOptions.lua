@@ -8,8 +8,10 @@ local thresholdOption = options:addComboBox(
     explanation
 )
 
-for threshold = 90, 0, -10 do
-    thresholdOption:addItem(tostring(threshold) .. "%", threshold == 70)
+-- addItem resolves its name with getText, where '%' starts a format directive.
+-- The translation values therefore escape their literal percent signs as '%%'.
+for option = 1, 10 do
+    thresholdOption:addItem("UI_BetterGunJam_Threshold_option" .. option, option == 3)
 end
 
 BetterGunJam = BetterGunJam or {}
