@@ -3,5 +3,5 @@ poster=preview.png
 id=betterGUNJAM
 versionMin=42.0
 icon=icon.png
-modversion=1.1-dev
+modversion=2.0
 description=Guns don't jam when their condition is above a customizable threshold (70% by default). Below it, jam chance gradually increases as condition decreases.
