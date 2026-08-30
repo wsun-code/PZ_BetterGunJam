@@ -19,4 +19,5 @@ dist: metadata
 	rm -rf $(DIST_WORKSHOP)/Contents/mods/BetterGunJam/*
 	cp -r 41 $(DIST_WORKSHOP)/Contents/mods/BetterGunJam/
 	cp -r 42 $(DIST_WORKSHOP)/Contents/mods/BetterGunJam/
+	cp LICENSE $(DIST_WORKSHOP)/Contents/mods/BetterGunJam/
 	cp preview.png $(DIST_WORKSHOP)/preview.png
