@@ -3,15 +3,16 @@ Guns don’t jam if their condition is higher than 70%.
 MP supported but (currently) not tested. Looking forward to your feedback❤️.
 
 The threshold is customizable:
-- in singleplayer, customize the threshold under Options > Mods > Better Gun Jam. The change will take effect at once. 
-- in multiplayer, the server controls it through the sandbox settings and it will be shared with all players.
+[list]
+ [*] in singleplayer, customize the threshold under Options > Mods > Better Gun Jam. The change will take effect at once. 
+ [*] in multiplayer, the server controls it through the sandbox settings and it will be shared with all players.
+[/list]
 
 Set the active threshold to 0% to prevent gun-jamming completely. (but why not do it in the sandbox settings instead? :)
 
 Below the threshold, the jam chance will still be smaller than the vanilla's sandbox setting, and gradually increase as the condition decreases like the vanilla behavior.
 
 [h1]Compatibility[/h1]
-
 It should be compatible with ANY gun mod. If you worry about compatibility, enable it after any possible interfering mods.
 
 [h1]Notes on B41[/h1]
