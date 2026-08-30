@@ -1,0 +1,25 @@
+如果枪械的耐久度高于 70%，就不会卡壳。
+
+支持多人游戏，但（目前）未经测试。期待你的反馈❤️。
+
+阈值可自定义：
+[list]
+ [*] 单人游戏中，可在 暂停界面 > 配置 > 更友好的卡壳 下自定义阈值。修改会立即生效。
+ [*] 多人游戏中，由服务器通过沙盒设置控制，并对所有玩家生效。
+[/list]
+
+将有效阈值设为 0% 即可完全禁用卡壳机制。（但为什么不在沙盒设置里这么做呢？:)
+
+低于阈值时，卡壳几率仍会低于原版沙盒设置，并会像原版行为一样随耐久度降低而逐渐升高。
+
+[h1]兼容性[/h1]
+本模组应与任何枪械模组兼容。如果担心兼容性问题，请在可能产生冲突的模组之后启用它。
+
+[h1]B41 注意事项[/h1]
+在 B41 中，你仍需要 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2169435993]Mod Options (Build 41)[/url] 来配置阈值。
+
+[h1]更多信息[/h1]
+源代码托管于 [url=https://github.com/wsun-code/PZ_BetterGunJam]github.com/wsun-code/PZ_BetterGunJam[/url]。
+
+Workshop ID：2980114616
+Mod ID：betterGUNJAM
